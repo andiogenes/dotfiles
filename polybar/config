@@ -42,8 +42,9 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome:pixelsize=10;1
 
-modules-left = bspwm i3 xwindow
+modules-left = i3 xwindow
 ;modules-center = mpd
 modules-center = date
 modules-right = pulseaudio xkeyboard memory cpu wlan battery powermenu
@@ -239,10 +240,10 @@ label = %time% %date%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = 
 label-muted-foreground = #666
 
 bar-volume-width = 10

@@ -201,7 +201,14 @@ gaps inner 7
 #smart_gaps on
 
 # Colors
-set $focused    #94929F
-set $unfocused  #6A5D72
-client.focused   $focused $focused $focused $focused $focused
-client.unfocused $unfocused $unfocused $unfocused $unfocused $unfocused
+set $focused            #94929F
+set $unfocused          #6A5D72
+set $backgr             #1D2C3F
+set $backgr_lgt         #3D4C5F
+set $backgr_alt         #4A3D52
+set $textcolor          #DFDFDF
+set $textcolor_alt      #CFCFCF
+
+client.focused          $focused   $backgr     $textcolor     $focused   $focused
+client.focused_inactive $focused   $backgr_lgt $textcolor     $focused   $focused
+client.unfocused        $unfocused $backgr_alt $textcolor_alt $unfocused $unfocused

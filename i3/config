@@ -6,7 +6,7 @@ font pango:DejaVu Sans Mono 8
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale /home/anton/Загрузки/wallhaven-j5mz95_1920x1080.png
+exec --no-startup-id feh --bg-scale /home/anton/.config/i3/wp.png
 
 # NetworkManager
 exec --no-startup-id nm-applet

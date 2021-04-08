@@ -2,8 +2,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-(add-to-list 'default-frame-alist '(background-color . "#1D2C3F"))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -14,7 +12,8 @@
  '(custom-enabled-themes '(poggers))
  '(custom-safe-themes
    '("8227f0287872682d06396bf697732f0baa9376b27ee8826b84d80b2261d9006b" default))
- '(package-selected-packages '(counsel ivy auto-complete evil)))
+ '(package-selected-packages
+   '(neotree cider clojure-mode paredit company-go go-mode racket-mode lsp-mode zig-mode company counsel ivy auto-complete evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -22,13 +21,23 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; Look and feel
+(global-display-line-numbers-mode)
+
+(setq-default tab-width 4)
+
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
+(show-paren-mode 1)
+(setq show-paren-delay 0)
+
 (add-to-list 'default-frame-alist '(font . "Source Code Pro-11" ))
 (set-face-attribute 'default t :font "Source Code Pro-11" )
 
+;; System, etc
+(setq make-backup-files nil)
 
 ;; Ivy
 (ivy-mode)
@@ -54,4 +63,16 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
-(set-background-color "#1D2C3F")
+;; Company mode
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; LSP
+(require 'lsp-mode)
+(setq lsp-headerline-breadcrumb-enable nil)
+(add-hook 'go-mode-hook 'lsp-deferred)
+
+;; Neotree
+(require 'neotree)
+(setq neo-smart-open t)
+(global-set-key (kbd "<f8>") 'neotree-toggle)

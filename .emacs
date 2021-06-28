@@ -9,11 +9,11 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(custom-enabled-themes '(poggers))
+ '(custom-enabled-themes '(base16-default-dark))
  '(custom-safe-themes
-   '("8227f0287872682d06396bf697732f0baa9376b27ee8826b84d80b2261d9006b" default))
+   '("16dd114a84d0aeccc5ad6fd64752a11ea2e841e3853234f19dc02a7b91f5d661" "8227f0287872682d06396bf697732f0baa9376b27ee8826b84d80b2261d9006b" default))
  '(package-selected-packages
-   '(neotree cider clojure-mode paredit company-go go-mode racket-mode lsp-mode zig-mode company counsel ivy auto-complete evil)))
+   '(base16-theme neotree cider clojure-mode paredit company-go go-mode racket-mode lsp-mode zig-mode company counsel ivy auto-complete evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

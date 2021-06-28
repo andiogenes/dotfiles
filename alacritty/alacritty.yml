@@ -16,27 +16,36 @@ font:
   offset:
     y: 2
 
+# Colors (Base16 Default Dark)
 colors:
+  # Default colors
   primary:
-    background: '#1D2C3F'
-    foreground: '#BCC8C9'
+    background: '0x181818'
+    foreground: '0xd8d8d8'
 
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0xd8d8d8'
+    cursor: '0xd8d8d8'
+
+  # Normal colors
   normal:
-    black:   '#2E3436'
-    red:     '#c02a2a'
-    green:   '#95D15C'
-    yellow:  '#C4A000'
-    blue:    '#569EEB'
-    magenta: '#4978BE'
-    cyan:    '#D7B172'
-    white:   '#D3D7CF'
+    black:   '0x181818'
+    red:     '0xab4642'
+    green:   '0xa1b56c'
+    yellow:  '0xf7ca88'
+    blue:    '0x7cafc2'
+    magenta: '0xba8baf'
+    cyan:    '0x86c1b9'
+    white:   '0xd8d8d8'
 
+  # Bright colors
   bright:
-    black:   '#555753'
-    red:     '#EF2929'
-    green:   '#8AE234'
-    yellow:  '#FCE94F'
-    blue:    '#729FCF'
-    magenta: '#729FCF'
-    cyan:    '#A29C8C'
-    white:   '#EEEEEC'
+    black:   '0x585858'
+    red:     '0xab4642'
+    green:   '0xa1b56c'
+    yellow:  '0xf7ca88'
+    blue:    '0x7cafc2'
+    magenta: '0xba8baf'
+    cyan:    '0x86c1b9'
+    white:   '0xf8f8f8'

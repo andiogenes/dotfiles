@@ -22,7 +22,7 @@ bindsym $mod+Shift+Cyrillic_shorti kill
 
 # start dmenu (a program launcher)
 # TODO: compute offsets via script that fetches info from xrandr
-bindsym $mod+Cyrillic_ve exec --no-startup-id dmenu_run -x 12 -y 1049 -z 1897 -nb '#1D2C3F' -sb '#D7B172' -sf '#000'
+bindsym $mod+Cyrillic_ve exec --no-startup-id dmenu_run -x 12 -y 1045 -z 1897 -nb '#181818' -sb '#f7ca88' -sf '#000'
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -199,13 +199,13 @@ for_window [class=".*"] border pixel 2
 
 # Gaps configuration
 #gaps outer 7
-gaps bottom 32
+gaps bottom 36
 gaps inner 10
 #smart_gaps on
 
 # Colors
-set $focused            #94929F
-set $unfocused          #6A5D72
+set $focused            #d8d8d8
+set $unfocused          #585858
 set $backgr             #1D2C3F
 set $backgr_lgt         #3D4C5F
 set $backgr_alt         #4A3D52

@@ -11,6 +11,9 @@ exec --no-startup-id feh --bg-scale /home/anton/.config/i3/wp.png
 # NetworkManager
 exec --no-startup-id nm-applet
 
+# Picom Compositor
+exec_always --no-startup-id "kilall -q picom; picom"
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

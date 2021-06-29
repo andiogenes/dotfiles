@@ -4,7 +4,7 @@
 ; colormind.io/image or other 
 ; similar tools
 
-background = #181818
+background = #f2181818
 ;background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #d8d8d8

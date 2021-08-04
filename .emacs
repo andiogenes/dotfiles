@@ -3,25 +3,14 @@
 (package-initialize)
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(custom-enabled-themes '(base16-default-dark))
- '(custom-safe-themes
-   '("16dd114a84d0aeccc5ad6fd64752a11ea2e841e3853234f19dc02a7b91f5d661" "8227f0287872682d06396bf697732f0baa9376b27ee8826b84d80b2261d9006b" default))
  '(package-selected-packages
    '(base16-theme neotree cider clojure-mode paredit company-go go-mode racket-mode lsp-mode zig-mode company counsel ivy auto-complete evil)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 ;; Look and feel
+(load-theme 'base16-default-dark t)
+
 (global-display-line-numbers-mode)
 
 (setq-default tab-width 4)
@@ -35,6 +24,10 @@
 
 (add-to-list 'default-frame-alist '(font . "Source Code Pro-11" ))
 (set-face-attribute 'default t :font "Source Code Pro-11" )
+
+;; Transparency
+(set-frame-parameter (selected-frame) 'alpha '(95 95))
+(add-to-list 'default-frame-alist '(alpha 95 95))
 
 ;; System, etc
 (setq make-backup-files nil)
